@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App {
+  text-align: center;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 26em;
+}
+
+h1 {
+  color: #fff;
+  font-size: 24px;
+}
+
+.grid {
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.cell.selected {
+  background-color: #007bff;
+  border-color: #1e90ff;
+}
+
+.cell:hover {
+  background-color: #1e90ff;
+  border-color: #007bff;
+}
+
+.start-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #1e90ff;
+  transform: scale(1.05);
+}
+
+.start-button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 5px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #007bff;
+  border-color: #1e90ff;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+  max-height: 150px; /* Set max height for move history */
+  overflow-y: auto; /* Add vertical scrolling */
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+ul li {
+  background-color: #444;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #555;
+}
+
+ul li:nth-child(even) {
+  background-color: #555;
+}
